@@ -1,0 +1,63 @@
+Task 4: Make the objects publicly accessible
+Click the Permissions tab to configure your bucket.
+
+In the Permissions tab, Edit the Bucket Policy.
+
+You will be able to see a Blank policy editor.
+
+Before creating the policy, you will need to copy the ARN (Amazon Resource Name) of your bucket.
+
+Copy the ARN of your bucket to the clipboard. It is displayed at the top of the policy editor. it looks like ARN:“arn:aws:s3:::your-bucket-name".
+
+In the policy below, update the bucket ARN on the Resource key-value and copy the policy code.
+
+
+{		
+"Id": "Policy1",		
+"Version": "2012-10-17",			
+"Statement": [			
+{			
+"Sid": "Stmt1",			
+"Action": [			
+"s3:GetObject"				
+],			
+"Effect": "Allow",		
+"Resource": "replace-this-string-with-your-bucket-arn/*",			
+"Principal": "*"				
+}				
+]				
+}				
+
+
+
+
+ec2 advanced setting
+
+			
+#!/bin/bash
+
+
+			
+yum update -y
+
+
+			
+yum install -y httpd.x86_64
+
+
+			
+systemctl start httpd
+
+
+			
+systemctl enable httpd
+
+
+			
+echo "<h1>Hello, this index.html page from $(hostname -f)</h1>" > /var/www/html/index.html
+
+
+			
+echo "<h1>Hello, this index2.html page from $(hostname -f)</h1>" > /var/www/html/index2.html
+
+			
